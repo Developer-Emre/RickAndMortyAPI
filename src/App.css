@@ -98,6 +98,11 @@ background-color: #C5DD5E;
   border: #C5DD5E;
 }
 /* Detay-son */
+.fav-btn {
+  color: white;
+}
 
-/* Favori-başlangıç */
+.fav-btn.favorite {
+  color: #C5DD5E; 
+}
 

@@ -12,7 +12,6 @@ export const Navbar = ({onSearch}) => {
           <img className='' src={rıckyLogo} alt="rıck_and_morty" />
           <ul className='flex justify-around items-center'>
             <li className='me-5'><Link to={"/"}><h1>Tüm Sezonlar</h1></Link></li>
-            <li className='me-5'><h1>Evrenler</h1></li>
             <li className='me-5'><Link to={"/character/"}><h1>Karakterler</h1></Link></li>
             <li className='me-5'><Link to={"/account"}><h1>Hesabım</h1></Link></li>
           </ul>

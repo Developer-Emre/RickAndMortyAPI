@@ -3,14 +3,16 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Loading from '../components/Loading';
 import Pagination from '../components/Pagination'
+import FavoriteButton from '../components/favorite'
+import { useDispatch } from 'react-redux';
+
 
 
 const EpisodeDetail = ({ match }) => {
+    const dispatch = useDispatch();
     const [episode, setEpisode] = useState(null);
     const [characters, setCharacters] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [favorites, setFavorites] = useState([]);
-
     const charactersPerPage = 4;
 
 
@@ -82,7 +84,8 @@ const EpisodeDetail = ({ match }) => {
                             <h1 className='max-w-40'>{character.name}</h1>
                             <div className='flex items-center justify-between'>
                                 <h2 className='text-2xl'>{character.id}</h2>
-                               
+                                
+                                <FavoriteButton character={character} isRemovable={false} />
                             </div>
                             <h2 className='text-2xl'>Status: {character.status}</h2>
                             <h2 className='text-2xl'>Species: {character.species}</h2>
